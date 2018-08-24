@@ -70,34 +70,38 @@ RowGroup.propTypes = {
   renderer: PropTypes.func
 };
 
-const  DefaultRowGroupRenderer = (props) => {
-  let treeDepth = props.treeDepth || 0;
-  let marginLeft = treeDepth * 20;
+class DefaultRowGroupRenderer extends React.Component {
+  render() {
+    const props = this.props
+    let treeDepth = props.treeDepth || 0;
+    let marginLeft = treeDepth * 20;
 
-  let style = {
-    height: '50px',
-    border: '1px solid #dddddd',
-    paddingTop: '15px',
-    paddingLeft: '5px'
-  };
+    let style = {
+      height: '50px',
+      border: '1px solid #dddddd',
+      paddingTop: '15px',
+      paddingLeft: '5px'
+    };
 
-  let onKeyDown = (e) => {
-    if (e.key === 'ArrowLeft') {
-      props.onRowExpandToggle(false);
-    }
-    if (e.key === 'ArrowRight') {
-      props.onRowExpandToggle(true);
-    }
-    if (e.key === 'Enter') {
-      props.onRowExpandToggle(!props.isExpanded);
-    }
-  };
-  return (
-    <div style={style} onKeyDown={onKeyDown} tabIndex={0}>
-      <span className="row-expand-icon" style={{float: 'left', marginLeft: marginLeft, cursor: 'pointer'}} onClick={props.onRowExpandClick} >{props.isExpanded ? String.fromCharCode('9660') : String.fromCharCode('9658')}</span>
-      <strong>{props.columnGroupName}: {props.name}</strong>
-    </div>
-  );
+    let onKeyDown = (e) => {
+      if (e.key === 'ArrowLeft') {
+        props.onRowExpandToggle(false);
+      }
+      if (e.key === 'ArrowRight') {
+        props.onRowExpandToggle(true);
+      }
+      if (e.key === 'Enter') {
+        props.onRowExpandToggle(!props.isExpanded);
+      }
+    };
+    return (
+      <div style={style} onKeyDown={onKeyDown} tabIndex={0}>
+        <span className="row-expand-icon" style={{float: 'left', marginLeft: marginLeft, cursor: 'pointer'}} onClick={props.onRowExpandClick} >{props.isExpanded ? String.fromCharCode('9660') : String.fromCharCode('9658')}</span>
+        <strong>{props.columnGroupName}: {props.name}</strong>
+      </div>
+    );
+  }
+
 };
 
 DefaultRowGroupRenderer.propTypes = {

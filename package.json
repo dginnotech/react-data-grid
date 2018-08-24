@@ -1,6 +1,6 @@
 {
-  "name": "react-data-grid",
-  "private": true,
+  "name": "@dgit/react-data-grid",
+  "private": false,
   "description": "Data grid for React",
   "main": "src/index.js",
   "scripts": {
@@ -12,11 +12,12 @@
     "dev-server": "node webpack-dev-server.js",
     "beforepublish": "lerna run beforepublish",
     "eslint": "./node_modules/.bin/eslint -f unix packages/react-data-grid/src/** packages/react-data-grid-addons/src/**",
-    "lerna-publish": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./ci/publish/publish.ps1"
+    "lerna-publish": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./ci/publish/publish.ps1",
+    "lerna-publish-linux": "sh ./ci/publish/publish.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/adazzle/react-data-grid.git"
+    "url": "git://github.com/dginnotech/react-data-grid.git"
   },
   "keywords": [
     "react",

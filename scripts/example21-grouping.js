@@ -169,7 +169,7 @@ class Example extends React.Component {
     if (isNotInGroups) {
       columnGroups.push({key: activeColumn.key, name: activeColumn.name});
     }
-   
+
     this.setState({groupBy: columnGroups});
   };
 

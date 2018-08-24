@@ -1,5 +1,5 @@
-const ReactDataGrid = require('@dgit/react-data-grid');
-const { Toolbar, Data: { Selectors } } = require('@dgit/react-data-grid-addons');
+const ReactDataGrid = require('react-data-grid');
+const { Toolbar, Data: { Selectors } } = require('react-data-grid-addons');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
 

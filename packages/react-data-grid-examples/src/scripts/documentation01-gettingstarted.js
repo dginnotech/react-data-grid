@@ -14,12 +14,12 @@ class GettingStarted extends React.Component {
           <pre>
             var React = require('react');
             <br />
-            var ReactDataGrid = require('@dgit/react-data-grid');
+            var ReactDataGrid = require('react-data-grid');
           </pre>
         </div>
         <p>If you want to use extra features such as built in editors, formatters, toolbars and other plugins, you need to require the addons module instead</p>
         <div className="code-block js">
-          <pre>var ReactDataGrid = require('@dgit/react-data-grid/addons');</pre>
+          <pre>var ReactDataGrid = require('react-data-grid/addons');</pre>
         </div>
         <br />
         <h4>Using Distribution Scripts</h4>

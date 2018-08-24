@@ -1,8 +1,8 @@
 const faker = require('faker');
-const ReactDataGrid = require('@dgit/react-data-grid');
+const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
-const { Editors, Toolbar, Formatters } = require('@dgit/react-data-grid-addons');
+const { Editors, Toolbar, Formatters } = require('react-data-grid-addons');
 import update from 'immutability-helper';
 const { AutoComplete: AutoCompleteEditor, DropDownEditor } = Editors;
 const { ImageFormatter } = Formatters;

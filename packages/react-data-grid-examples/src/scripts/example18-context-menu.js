@@ -1,7 +1,7 @@
-const ReactDataGrid = require('@dgit/react-data-grid');
+const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
-const { Menu: { ContextMenu, MenuItem, SubMenu } } = require('@dgit/react-data-grid-addons');
+const { Menu: { ContextMenu, MenuItem, SubMenu } } = require('react-data-grid-addons');
 
 import PropTypes from 'prop-types';
 

@@ -1,10 +1,10 @@
-const ReactDataGrid = require('@dgit/react-data-grid');
+const ReactDataGrid = require('react-data-grid');
 const exampleWrapper = require('../components/exampleWrapper');
 const React = require('react');
 const {
    Draggable: { Container: DraggableContainer, RowActionsCell, DropTargetRowContainer },
    Data: { Selectors }
-} = require('@dgit/react-data-grid-addons');
+} = require('react-data-grid-addons');
 
 import PropTypes from 'prop-types';
 

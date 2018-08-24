@@ -1,5 +1,20 @@
 import { utils } from 'react-data-grid';
-const { getMixedTypeValueRetriever, isImmutableCollection } = utils;
+const { isImmutableCollection } = utils;
+
+const getMixedTypeValueRetriever = (isImmutable) => {
+  let retObj = {};
+  const retriever = (item, key) => {
+    if(item[key] && item[key].sortValue) {
+      return item[key].sortValue
+    }
+    return item[key];
+  };
+  const immutableRetriever =  (immutable, key) => { return immutable.get(key); };
+
+  retObj.getValue = isImmutable ? immutableRetriever : retriever;
+
+  return retObj;
+}
 
 const comparer = (a, b) => {
   if (a > b) {

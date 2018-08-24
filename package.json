@@ -12,8 +12,8 @@
     "dev-server": "node webpack-dev-server.js",
     "beforepublish": "lerna run beforepublish",
     "eslint": "./node_modules/.bin/eslint -f unix packages/react-data-grid/src/** packages/react-data-grid-addons/src/**",
-    "lerna-publish": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./ci/publish/publish.ps1",
-    "lerna-publish-linux": "sh ./ci/publish/publish.sh"
+    "lerna-publish-win": "@powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./ci/publish/publish.ps1",
+    "lerna-publish": "sh ./ci/publish/publish.sh"
   },
   "repository": {
     "type": "git",

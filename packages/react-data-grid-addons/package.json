@@ -1,7 +1,10 @@
 {
   "name": "@dgit/react-data-grid-addons",
-  "version": "test",
+  "version": "4.0.8",
   "description": "A set of addons for react-data-grid",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "beforepublish": "node ../../ci/publish/replacePackageEntry react-data-grid-addons true",
     "postpublish": "node ../../ci/publish/replacePackageEntry react-data-grid-addons",

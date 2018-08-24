@@ -1,7 +1,10 @@
 {
   "name": "@dgit/react-data-grid",
-  "version": "test",
+  "version": "4.0.8",
   "description": "Excel-like grid component built with React, with editors, keyboard navigation, copy & paste, and the like",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "beforepublish": "node ../../ci/publish/replacePackageEntry react-data-grid true",
     "postpublish": "node ../../ci/publish/replacePackageEntry react-data-grid",

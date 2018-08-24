@@ -1,8 +1,11 @@
 {
   "name": "@dgit/react-data-grid-examples",
-  "version": "test",
+  "version": "4.0.8",
   "description": "A set of examples for the grid",
   "main": "main.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "beforepublish": "node ../../ci/publish/replacePackageEntry react-data-grid-examples true",
     "postpublish": "node ../../ci/publish/replacePackageEntry react-data-grid-examples",

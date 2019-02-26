@@ -36,7 +36,7 @@ class RowsContainer extends React.Component {
     const contextMenu = React.cloneElement(this.props.contextMenu, newProps);
     // Initialise the context menu if it is available
     return (
-      <div>
+      <div style={{width: this.props.width}}>
         <ContextMenuTrigger id={newProps.id}>
           <SimpleRowsContainer {...this.props} />
         </ContextMenuTrigger>
@@ -46,6 +46,7 @@ class RowsContainer extends React.Component {
   }
 
   render() {
+    console.log("this.props in rows container", this.props)
     if (this.hasContextMenu()) {
       this.validatePlugin();
       return this.renderRowsWithContextMenu();

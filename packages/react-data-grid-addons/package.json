@@ -1,6 +1,6 @@
 {
   "name": "@dgit/react-data-grid-addons",
-  "version": true,
+  "version": "4.0.14",
   "description": "A set of addons for react-data-grid",
   "publishConfig": {
     "access": "public"

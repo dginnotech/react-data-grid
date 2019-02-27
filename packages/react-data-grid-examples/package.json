@@ -1,6 +1,6 @@
 {
   "name": "@dgit/react-data-grid-examples",
-  "version": "4.0.14",
+  "version": true,
   "description": "A set of examples for the grid",
   "main": "main.js",
   "publishConfig": {

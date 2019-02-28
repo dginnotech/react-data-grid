@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const DEFAULT_CONTEXT_MENU_ID = 'rgdContextMenu';
 
-const SimpleRowsContainer = (props) => <div style={{width: props.width, overflowX: "scroll"}} key="rows-container">{props.rows}</div>;
+const SimpleRowsContainer = (props) => <div style={{width: props.width, overflowX: "scroll", minWidth: "100%"}} key="rows-container">{props.rows}</div>;
 
 SimpleRowsContainer.propTypes = {
   width: PropTypes.number,
@@ -36,7 +36,7 @@ class RowsContainer extends React.Component {
     const contextMenu = React.cloneElement(this.props.contextMenu, newProps);
     // Initialise the context menu if it is available
     return (
-      <div style={{width: this.props.width}}>
+      <div style={{width: this.props.width, overflowX: "scroll", minWidth: "100%"}}>
         <ContextMenuTrigger id={newProps.id}>
           <SimpleRowsContainer {...this.props} />
         </ContextMenuTrigger>
